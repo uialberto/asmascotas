@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuMascota", "TuMascota\TuMascota.csproj", "{D9166AFA-B021-4371-9E41-99D8709025F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuMascota.Tests", "TuMascota.Tests\TuMascota.Tests.csproj", "{A7CAD2CF-879F-4027-8905-983C4A99C34C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{D8D950B3-9296-47BF-BF06-45A24E0C0C94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Presentacion", "01 Presentacion", "{1342D47B-6BE4-4BFC-BB27-9F4CDE85297F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Aplicacion", "02 Aplicacion", "{611331C2-3439-423E-8AE1-0AE5FC667837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Infraestructura", "03 Infraestructura", "{C63174DA-F48B-4ABB-B70B-C969D161A658}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +36,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D9166AFA-B021-4371-9E41-99D8709025F1} = {1342D47B-6BE4-4BFC-BB27-9F4CDE85297F}
+		{A7CAD2CF-879F-4027-8905-983C4A99C34C} = {1342D47B-6BE4-4BFC-BB27-9F4CDE85297F}
+		{D8D950B3-9296-47BF-BF06-45A24E0C0C94} = {C63174DA-F48B-4ABB-B70B-C969D161A658}
 	EndGlobalSection
 EndGlobal
