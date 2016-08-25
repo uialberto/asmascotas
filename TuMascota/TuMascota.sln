@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuMascota", "TuMascota\TuMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuMascota.Tests", "TuMascota.Tests\TuMascota.Tests.csproj", "{A7CAD2CF-879F-4027-8905-983C4A99C34C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{D8D950B3-9296-47BF-BF06-45A24E0C0C94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A7CAD2CF-879F-4027-8905-983C4A99C34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7CAD2CF-879F-4027-8905-983C4A99C34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7CAD2CF-879F-4027-8905-983C4A99C34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D950B3-9296-47BF-BF06-45A24E0C0C94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D950B3-9296-47BF-BF06-45A24E0C0C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D950B3-9296-47BF-BF06-45A24E0C0C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D950B3-9296-47BF-BF06-45A24E0C0C94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

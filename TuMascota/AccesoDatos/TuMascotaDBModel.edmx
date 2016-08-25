@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="TuMascotaDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="TuMascotaDBModelTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TuMascotaDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="TuMascotaDBModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MascotaSet" EntityType="TuMascotaDBModel.Mascota" />
+          <EntitySet Name="AnimalSet" EntityType="TuMascotaDBModel.Animal" />
+          <AssociationSet Name="MascotaAnimal" Association="TuMascotaDBModel.MascotaAnimal">
+            <End Role="Mascota" EntitySet="MascotaSet" />
+            <End Role="Animal" EntitySet="AnimalSet" />
+          </AssociationSet>
+          <EntitySet Name="UsuarioSet" EntityType="TuMascotaDBModel.Usuario" />
+          <AssociationSet Name="UsuarioOfreceMascota" Association="TuMascotaDBModel.UsuarioOfreceMascota">
+            <End Role="Usuario" EntitySet="UsuarioSet" />
+            <End Role="Mascota" EntitySet="MascotaSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Mascota">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="true" MaxLength="100" />
+          <Property Name="Nacimiento" Type="DateTime" Nullable="true" />
+          <Property Name="Adoptado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Animal" Relationship="TuMascotaDBModel.MascotaAnimal" FromRole="Mascota" ToRole="Animal" />
+          <Property Name="AnimalId" Type="Int32" Nullable="false" />
+          <Property Name="Color" Type="String" MaxLength="50" Nullable="true" />
+          <Property Name="Foto" Type="Binary" Nullable="true" />
+          <NavigationProperty Name="Usuario" Relationship="TuMascotaDBModel.UsuarioOfreceMascota" FromRole="Mascota" ToRole="Usuario" />
+          <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Animal">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" />
+          <NavigationProperty Name="MascotaSet" Relationship="TuMascotaDBModel.MascotaAnimal" FromRole="Animal" ToRole="Mascota" />
+        </EntityType>
+        <Association Name="MascotaAnimal">
+          <End Type="TuMascotaDBModel.Mascota" Role="Mascota" Multiplicity="*" />
+          <End Type="TuMascotaDBModel.Animal" Role="Animal" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Mascota">
+              <PropertyRef Name="AnimalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" />
+          <Property Name="CorreoElectronico" Type="Binary" Nullable="false" />
+          <Property Name="TelefonoFijo" Type="String" Nullable="false" />
+          <Property Name="Celular" Type="String" Nullable="false" />
+          <Property Name="Facebook" Type="String" Nullable="false" />
+          <NavigationProperty Name="MascotaSet" Relationship="TuMascotaDBModel.UsuarioOfreceMascota" FromRole="Usuario" ToRole="Mascota" />
+          <Property Name="Direccion" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="UsuarioOfreceMascota">
+          <End Type="TuMascotaDBModel.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="TuMascotaDBModel.Mascota" Role="Mascota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Mascota">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="TuMascotaDBModel" />
+        <Alias Key="Target" Value="TuMascotaDBModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="TuMascotaDBModelContainer" StorageEntityContainer="TuMascotaDBModelTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
