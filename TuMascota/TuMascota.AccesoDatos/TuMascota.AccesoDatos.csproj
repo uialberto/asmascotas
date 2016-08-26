@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,13 +42,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataModels\ModelTuMascota.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTuMascota.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataModels\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Repositorios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DataModels\ModelTuMascota.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelTuMascota.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DataModels\ModelTuMascota.edmx.diagram">
+      <DependentUpon>ModelTuMascota.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
