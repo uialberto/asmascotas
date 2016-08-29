@@ -13,7 +13,9 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelTuMascota" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="ModelTuMascotaContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="AnimalSet" EntityType="ModelTuMascota.Animal" />
+          <EntitySet Name="Animales" EntityType="ModelTuMascota.Animal" />
+          <EntitySet Name="Usuarios" EntityType="ModelTuMascota.Usuario" />
+          <EntitySet Name="Mascotas" EntityType="ModelTuMascota.Mascota" />
         </EntityContainer>
         <EntityType Name="Animal">
           <Key>
@@ -21,6 +23,33 @@
           </Key>
           <Property Name="IdAnimal" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" Nullable="false" Unicode="true" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="300" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="250" />
+          <Property Name="Nombres" Type="String" Nullable="false" Unicode="true" MaxLength="300" />
+          <Property Name="Apellidos" Type="String" Unicode="true" MaxLength="300" Nullable="true" />
+          <Property Name="Celular" Type="String" MaxLength="120" Nullable="true" />
+          <Property Name="Telefono" Type="String" Nullable="true" MaxLength="120" />
+          <Property Name="Direccion" Type="String" Nullable="false" Unicode="true" MaxLength="800" />
+          <Property Name="Facebook" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mascota">
+          <Key>
+            <PropertyRef Name="IdMascota" />
+          </Key>
+          <Property Name="IdMascota" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" />
+          <Property Name="Nacimiento" Type="String" Nullable="false" />
+          <Property Name="Color" Type="String" Nullable="false" />
+          <Property Name="Raza" Type="String" Nullable="false" MaxLength="300" />
+          <Property Name="UrlFoto" Type="String" Nullable="false" MaxLength="800" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="3" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
