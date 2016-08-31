@@ -42,15 +42,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModels\MascotaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MascotaModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataModels\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Repositorios\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <EntityDeploy Include="DataModels\MascotaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MascotaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataModels\MascotaModel.edmx.diagram">
+      <DependentUpon>MascotaModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
