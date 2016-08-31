@@ -40,10 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modulos\Core\Mascotas\Repo\RepoMascotas.cs" />
+    <Compile Include="Modulos\Core\Mascotas\Repo\RepoUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Modulos\" />
+    <Folder Include="Modulos\Core\Mascotas\Dtos\" />
+    <Folder Include="Modulos\Core\Mascotas\Impl\" />
+    <Folder Include="Modulos\Core\Usuarios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TuMascota.AccesoDatos\TuMascota.AccesoDatos.csproj">
+      <Project>{cabe8849-c1e1-4265-8d18-1264fef512b6}</Project>
+      <Name>TuMascota.AccesoDatos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

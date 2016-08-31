@@ -1,0 +1,7 @@
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\bin\Debug\TuMascota.Aplicacion.dll
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\bin\Debug\TuMascota.Aplicacion.pdb
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\bin\Debug\TuMascota.AccesoDatos.dll
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\bin\Debug\TuMascota.AccesoDatos.pdb
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\obj\Debug\TuMascota.Aplicacion.csprojResolveAssemblyReference.cache
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\obj\Debug\TuMascota.Aplicacion.dll
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\obj\Debug\TuMascota.Aplicacion.pdb

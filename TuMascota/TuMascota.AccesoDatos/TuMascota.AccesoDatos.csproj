@@ -47,12 +47,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MascotaModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Modulos\Core\Repositorios\IRepoMascotas.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Modulos\Core\Repositorios\IRepoUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repositorios\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.Config" />
     <EntityDeploy Include="DataModels\MascotaModel.edmx">
