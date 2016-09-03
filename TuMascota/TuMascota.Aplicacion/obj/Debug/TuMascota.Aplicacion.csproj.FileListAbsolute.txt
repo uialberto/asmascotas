@@ -5,3 +5,10 @@ D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\bin\Debug\TuM
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\obj\Debug\TuMascota.Aplicacion.csprojResolveAssemblyReference.cache
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\obj\Debug\TuMascota.Aplicacion.dll
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion\obj\Debug\TuMascota.Aplicacion.pdb
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.Aplicacion\bin\Debug\TuMascota.Aplicacion.dll
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.Aplicacion\bin\Debug\TuMascota.Aplicacion.pdb
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.Aplicacion\bin\Debug\TuMascota.AccesoDatos.dll
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.Aplicacion\bin\Debug\TuMascota.AccesoDatos.pdb
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.Aplicacion\obj\Debug\TuMascota.Aplicacion.csprojResolveAssemblyReference.cache
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.Aplicacion\obj\Debug\TuMascota.Aplicacion.dll
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.Aplicacion\obj\Debug\TuMascota.Aplicacion.pdb

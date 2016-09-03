@@ -5,3 +5,9 @@ D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\bin\Deb
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\obj\Debug\TuMascota.AccesoDatos.Test.csprojResolveAssemblyReference.cache
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\obj\Debug\TuMascota.AccesoDatos.Test.dll
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\obj\Debug\TuMascota.AccesoDatos.Test.pdb
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\bin\Debug\TuMascota.AccesoDatos.Test.dll
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\bin\Debug\TuMascota.AccesoDatos.Test.pdb
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\obj\Debug\TuMascota.AccesoDatos.Test.dll
+C:\Users\odelgadillo\Source\Repos\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\obj\Debug\TuMascota.AccesoDatos.Test.pdb

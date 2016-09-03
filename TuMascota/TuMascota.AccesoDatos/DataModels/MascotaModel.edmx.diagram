@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="ed0271babc134d268345ee77a6a61502" Name="Diagram1" >
         <EntityTypeShape EntityType="MascotaModel.Usuario" Width="1.5" PointX="0.875" PointY="0.5" />
-        <EntityTypeShape EntityType="MascotaModel.Mascota" Width="2" PointX="5.125" PointY="1.375" />
+        <EntityTypeShape EntityType="MascotaModel.Mascota" Width="2" PointX="4.875" PointY="1" />
         <AssociationConnector Association="MascotaModel.UsuarioMascota" />
       </Diagram>
     </edmx:Diagrams>
