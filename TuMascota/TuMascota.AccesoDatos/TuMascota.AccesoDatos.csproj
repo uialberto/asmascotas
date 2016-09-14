@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -40,12 +49,32 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIBASOFT.Base.Comunes, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uibasoft-base-comunes.1.0.2-alpha5\lib\net45\UIBASOFT.Base.Comunes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModels\Mascota.cs">
+      <DependentUpon>MascotaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\MascotaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MascotaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\MascotaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MascotaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataModels\MascotaModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MascotaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\Usuario.cs">
+      <DependentUpon>MascotaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Modulos\Core\Usuarios\IRepoUsuarios.cs" />
@@ -63,6 +92,23 @@
     <None Include="DataModels\MascotaModel.edmx.diagram">
       <DependentUpon>MascotaModel.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataModels\MascotaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MascotaModel.Context.cs</LastGenOutput>
+      <DependentUpon>MascotaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DataModels\MascotaModel.edmx.sql" />
+    <Content Include="DataModels\MascotaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MascotaModel.cs</LastGenOutput>
+      <DependentUpon>MascotaModel.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
