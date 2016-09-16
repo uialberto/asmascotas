@@ -19,6 +19,7 @@ namespace TuMascota.AccesoDatos.Test.Test.Core
         {
             #region Arrange
 
+
             var user = new Usuario()
             {
                 Username = UtilitariosBase.NewGuid(),
