@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UIBASOFT.Base.Dominio</name>
+    </assembly>
+    <members>
+        <member name="T:UIBASOFT.Base.Dominio.Repositories.IPersistRepository`1">
+            <summary>
+            Contrato que define métodos de persistencia al repositorio de datos para una implementacion del patrón Repositorio.
+            </summary>
+            <typeparam name="TEntity">Representa la entidad de dominio.</typeparam>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IPersistRepository`1.Add(`0)">
+            <summary>
+            Adiciona un elemento al repositorio de datos para ser persistido.
+            </summary>
+            <param name="entity">Entidad del dominio</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IPersistRepository`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Adiciona una lista de entidades al repositorio de datos para ser persistido.
+            </summary>
+            <param name="entities">Representa una lista de entidades del dominio.</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IPersistRepository`1.Modify(`0)">
+            <summary>
+            Adiciona un elemento del repositorio de datos para ser modificado.
+            </summary>
+            <param name="entity">Entidad de dominio.</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IPersistRepository`1.Remove(System.Object)">
+            <summary>
+            Elimina un elemento del repositorio de datos a partir de su identificador.
+            </summary>
+            <param name="id">Identificador de la endidad de dominio</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IPersistRepository`1.Remove(`0)">
+            <summary>
+            Elimina el elemento especificado o entidad del dominio del repositorio de datos.
+            </summary>
+            <param name="entity">Representa una entidad de dominio</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IPersistRepository`1.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Elimina todos los elementos del repositorio de datos que cumplan la expresion de filtrado.
+            </summary>
+            <param name="expression">Expresion o condicion de filtrado.</param>
+        </member>
+        <member name="T:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1">
+            <summary>
+            Contrato que define métodos de lecturas al repositorio de datos para una implementacion del patrón Repositorio.
+            </summary>
+            <typeparam name="TEntity">Representa la entidad de dominio.</typeparam>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Get(System.Object)">
+            <summary>
+            Obtiene una entidad del resositorio de datos a partir de su identificador.
+            </summary>
+            <param name="primaryKey">Identificador de la entidad de dominio.</param>
+            <returns>Entidad de dominio del repositorio de datos.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Get``1(System.Object,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Obtiene una entidad proyectada del repositorio de datos a partir de su identificador, proyectando solo campos
+            especificados en la proyección.
+            </summary>
+            <typeparam name="TProjection">Objeto donde se proyectará los datos</typeparam>
+            <param name="primaryKey">Identificador de la entidad de dominio.</param>
+            <param name="projection">Campos a proyectar.</param>
+            <returns>Entidad proyectada del repositorio.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtiene el primer elemento del repositorio de datos que cumpla la expresión de filtrado.
+            </summary>
+            <param name="expression">Expresion de filtrado.</param>
+            <returns>La primer entidad de dominio si existe o null si no existe</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.FirstOrDefault">
+            <summary>
+            Obtiene el primer elemento del repositorio de datos.
+            </summary>
+            <returns>La primer entidad de dominio si existe o null si no existe</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.FirstOrDefault(System.Object)">
+            <summary>
+            Obtiene el primer elemento del repositorio de datos a partir del identificador de la entidad.
+            </summary>
+            <param name="primaryKey">Identificador de la entidad de dominio.</param>
+            <returns>Primer entidad o null</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtiene la primer entidad del repositorio de datos o null a partir de una expresión de filtrado.
+            </summary>
+            <param name="expression">Expresión de filtrado</param>
+            <returns>La primer entidad de dominio si existe o null si no existe</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Single(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtiene la primer entidad single del repositorio de datos o null a partir de una expresión de filtrado.
+            </summary>
+            <param name="expression">Expresión de filtrado</param>
+            <returns>La primer entidad de dominio si existe o null si no existe</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Exists(System.Object)">
+            <summary>
+            Determina si existe una entidad en el repositorio de datos a partir de su identificador.
+            </summary>
+            <param name="primaryKey">Identificador de la entidad de dominio.</param>
+            <returns>Verdadero si la entidad existe.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Determina si existe algún elemento que cumpla con la expresión de filtrado.
+            </summary>
+            <param name="expression">Expresión de filtrado</param>
+            <returns>Verdadero si existe al menos un elemento que cumpla la condición de filtrado</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.All(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Determina si todos los elementos cumplen con la expresión de filtrado.
+            </summary>
+            <param name="expression">Expresión de filtrado.</param>
+            <returns>Verdadero si todos los elementos cumplen la condición de filtrado</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetAll">
+            <summary>
+            Obtiene todas las entidades de dominio del repositorio de datos de la entidad.
+            </summary>
+            <returns>Una lista IQueryable de los elementos del repositorio de datos de la entidad.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtiene todas las entidades de dominio del repositorio de datos de la entidad que cumplan con la condición de filtrado.
+            </summary>
+            <param name="expression">Expresión de filtrado.</param>
+            <returns>Una lista IQueryable de los elementos del repositorio de datos de la entidad.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetAll``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Obtiene todo los elementos del repositorio de datos de la entidad proyectando solo aquellos campos especificados en la proyección.
+            </summary>
+            <typeparam name="TProjection">Objeto a proyectar.</typeparam>
+            <param name="projection">Campos especificos a proyectar.</param>
+            <returns>Una lista IQueryable de elementos de proyección.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetAll(System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Get all elements of type TEntity in repository
+            </summary>
+            <param name="includes">List of selected elements</param>
+            <returns></returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetFiltered(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtiene todos los elementos del repositorio de datos que cumplen la expresión de filtrado.
+            </summary>
+            <param name="expression">Expresión de filtrado</param>
+            <returns>Una lista IQueryable de elementos de entidad</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetFiltered``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Obtiene todo los elementos del repositorio de datos de la entidad proyectando solo aquellos campos especificados en la proyección
+            y que cumplan con la expresión de fitrado.
+            </summary>
+            <typeparam name="TProjection">Objeto a proyectar los resultados</typeparam>
+            <param name="filtro">Expresión de filtrado</param>
+            <param name="projection">Campos a proyectar</param>
+            <returns>Una lista IQueryable de elementos de proyección.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Get(System.Object,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Get element by entity key
+            </summary>
+            <param name="id">Entity key value</param>
+            <returns></returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Max``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Obtiene el maximo elemento del selector especificado y que cumple la expresión de filtrado.
+            </summary>
+            <typeparam name="Tipe">Tipo o valor maximo a retornar</typeparam>
+            <param name="filtro">Expresión de filtrado para el maximo.</param>
+            <param name="selector">Selector de maximo.</param>
+            <returns>El maximo elemento del selector especificado y que cumple la expresión de filtrado.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Min``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})" -->
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetPage``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32,System.Int32,System.Data.SqlClient.SortOrder)">
+            <summary>
+            Obtiene una lista paginada de elementos del repositorio de datos de la entidad.
+            </summary>
+            <typeparam name="TOrderBy">Especifica el campo para ordenar.</typeparam>
+            <param name="orderBy">Especifica el campo por el que se ordenará los resultado.</param>
+            <param name="pageIndex">Indice dónde iniciará el paginado.</param>
+            <param name="pageSize">Cantidad de elementos por página.</param>
+            <param name="sortOrder">Ordenar los resultados Ascendente o Descendente. Sino se especifica se asume Ascendentemente.</param>
+            <returns>lista paginada de elementos del repositorio de datos de la entidad.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetPaged``1(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Get all elements of type TEntity in repository
+            </summary>
+            <param name="pageIndex">Page index</param>
+            <param name="pageCount">Number of elements in each page</param>
+            <param name="orderByExpression">Order by expression for this query</param>
+            <param name="ascending">Specify if order is ascending</param>
+            <returns>List of selected elements</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetFiltered(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+             Obtiene todo los elementos del repositorio de datos de la entidad proyectando solo aquellos campos especificados en la proyección
+            </summary>
+            <param name="filter">Expresión de filtrado</param>
+            <returns>Una lista IQueryable de elementos de proyección.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetPage``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``1}},System.Data.SqlClient.SortOrder)">
+            <summary>
+            Obtiene una lista paginada de elementos del repositorio de datos de la entidad proyectada.
+            </summary>
+            <typeparam name="TOrderBy">Especifica el campo para ordenar.</typeparam>
+            <typeparam name="TProjection">Especifica el objeto donde se proyectará los resultados.</typeparam>
+            <param name="orderBy">Especifica el campo por el que se ordenará los resultado.</param>
+            <param name="pageIndex">Indice dónde iniciará el paginado.</param>
+            <param name="pageSize">Cantidad de elementos por página</param>
+            <param name="projection">Especificacion de campos a proyectar</param>
+            <param name="sortOrder">Ordenar los resultados Ascendente o Descendente. Sino se especifica se asume Ascendentemente.</param>
+            <returns>Lista de elementos proyectados del repositorio de datos de la entidad.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetPageResultList``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32,System.Int32,System.Data.SqlClient.SortOrder)">
+            <summary>
+            Obtiene un elemento donde se proyecta toda la información de paginado.
+            </summary>
+            <typeparam name="TOrderBy">Especifica el campo para ordenar.</typeparam>
+            <param name="orderBy">Especifica el campo por el que se ordenará los resultado.</param>
+            <param name="pageIndex">Indice dónde iniciará el paginado.</param>
+            <param name="pageSize">Cantidad de elementos por página</param>
+            <param name="sortOrder">Ordenar los resultados Ascendente o Descendente. Sino se especifica se asume Ascendentemente.</param>
+            <returns>Elemento que contiene toda la información del páginado especificado.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetPage``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32,System.Int32,System.Data.SqlClient.SortOrder)">
+            <summary>
+            Obtiene una lista paginada de elementos del repositorio de datos de la entidad proyectada. 
+            </summary>
+            <typeparam name="TOrderBy">Especifica el campo para ordenar.</typeparam>
+            <param name="criteria">Expresión de filtrado</param>
+            <param name="orderBy">Especifica el campo por el que se ordenará los resultado.</param>
+            <param name="pageIndex">Indice dónde iniciará el paginado.</param>
+            <param name="pageSize">Cantidad de elementos por página</param>
+            <param name="sortOrder">Ordenar los resultados Ascendente o Descendente. Sino se especifica se asume Ascendentemente.</param>
+            <returns>Lista paginada de elementos del repositorio de datos de la entidad.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetPage``2(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``1}},System.Data.SqlClient.SortOrder)">
+            <summary>
+            Obtiene una lista paginada de elementos del repositorio de datos de la entidad proyectada.
+            </summary>
+            <typeparam name="TOrderBy">Especifica el campo para ordenar.</typeparam>
+            <typeparam name="TProjection">Especifica el objeto donde se proyectará los resultados.</typeparam>
+            <param name="filtro">Expresion de filtrado</param>
+            <param name="orderBy">Especifica el campo por el que se ordenará los resultado.</param>
+            <param name="pageIndex">Indice dónde iniciará el paginado.</param>
+            <param name="pageSize">Cantidad de elementos por página</param>
+            <param name="projection">Especificacion de campos a proyectar</param>
+            <param name="sortOrder"></param>
+            <returns>Lista de elementos proyectados del repositorio de datos de la entidad.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetPageResultList``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Int32,System.Int32,System.Data.SqlClient.SortOrder)">
+            <summary>
+            Obtiene un elemento donde se proyecta toda la información de paginado.
+            </summary>
+            <typeparam name="TOrderBy">Especifica el campo para ordenar.</typeparam>
+            <param name="filtro">Expresion de filtrado</param>
+            <param name="orderBy">Especifica el campo por el que se ordenará los resultado.</param>
+            <param name="pageIndex">Indice dónde iniciará el paginado.</param>
+            <param name="pageSize">Cantidad de elementos por página</param>
+            <param name="sortOrder">Ordenar los resultados Ascendente o Descendente. Sino se especifica se asume Ascendentemente.</param>
+            <param name="includes">Campos o elementos que se proyectará en el resultado.</param>
+            <returns>Elemento que contiene toda la información del páginado especificado.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.GetPageResultList``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Obtiene un elemento donde se proyecta toda la información de paginado.
+            </summary>
+            <param name="filtro">Expresion de filtrado</param>
+            <typeparam name="TOrderBy">Especifica el campo para ordenar.</typeparam>
+            <param name="pageIndex">Indice dónde iniciará el paginado.</param>
+            <param name="pageSize">Cantidad de elementos por página.</param>
+            <param name="orderByExpression">Expresion de ordenado.</param>
+            <param name="ascending">Determina si los elementos se ordenara ascendentemente o descendente.</param>
+            <param name="includes">Campos o elementos que se proyectará en el resultado.</param>
+            <returns></returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Count">
+            <summary>
+            Obtiene la cantidad de elementos existentes en el repositorio de datos de la entidad.
+            </summary>
+            <returns>Número de elementos del repositorio de datos.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtiene la cantidad de elementos existentes en el repositorio de datos de la entidad que cumplen con la condición de filtrado.
+            </summary>
+            <param name="expresion">Expresion de filtrado</param>
+            <returns>Cantidad de elementos existentes en el repositorio de datos de la entidad.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.CountToLong">
+            <summary>
+            Obtiene la cantidad de elementos de repositorio de datos de la entidad convertido a long.
+            </summary>
+            <returns>Cantidad de elementos existentes en el repositorio de datos de la entidad.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IReadRepository`1.CountToLong(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtiene la cantidad de elementos de repositorio de datos de la entidad convertido a long a partir de una expresion de filtrado.
+            </summary>
+            <param name="expresion">Expresion de filtrado</param>
+            <returns>Cantidad de elementos existentes en el repositorio de datos de la entidad.</returns>
+        </member>
+        <member name="T:UIBASOFT.Base.Dominio.Repositories.IRepository">
+            <summary>
+            Representa el contrato que define la implementación del patrón repositorio.
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Dominio.Repositories.IRepository`1">
+            <summary>
+            Contrato que define la implementacion del patrón repositorio a partir de la entidad de dominio.
+            </summary>
+            <typeparam name="TEntity">Entidad de dominio.</typeparam>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IRepository`1.Find(System.Object)">
+            <summary>
+            Determina la búsqueda de un elemento del repositorio de datos a partir de su identificador.
+            </summary>
+            <param name="primaryKey"></param>
+            <returns>Entidad del dominio o null</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IRepository`1.Find(System.Object[])">
+            <summary>
+            Determina la búsqueda de un conjunto de elementos del repositorio de datos a partir de sus identificadores.
+            </summary>
+            <param name="keyValues"></param>
+            <returns>Entidad del dominio o null</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IRepository`1.FindAsync(System.Object[])">
+            <summary>
+            Determina la búsqueda asincrona de un conjunto de elementos del repositorio de datos a partir de sus identificadores.
+            </summary>
+            <param name="keyValues">Identificadores de las entidades de dominio.</param>
+            <returns>Tarea asociada a la entidad de dominio</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IRepository`1.FindAsync(System.Threading.CancellationToken,System.Object[])">
+            <summary>
+            Determina la búsqueda asincrona de un conjunto de elementos del repositorio de datos a partir de sus identificadores.
+            </summary>
+            <param name="cancellationToken">Token de cancelacion</param>
+            <param name="keyValues">Identificadores de las entidades de dominio.</param>
+            <returns>Tarea asociada a la entidad de dominio</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IRepository`1.UnTrackEntity(`0)">
+            <summary>
+            Elimina el seguimiento de una entidad de dominio del contexto en la unidad de trabajo.
+            </summary>
+            <param name="item">Entidad del dominio</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.IRepository`1.GetEntityName">
+            <summary>
+            Obtiene el nombre de la entidad de dominio.
+            </summary>
+            <returns>Nombre general de la entidad de dominio.</returns>
+        </member>
+        <member name="P:UIBASOFT.Base.Dominio.Repositories.IRepository`1.InstanceId">
+            <summary>
+            Identificador del repositorio.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Dominio.Repositories.IRepository`1.UnitOfWork">
+            <summary>
+            Representa la Unidad de Trabajo (Unit of Work) al que esta asociado el repositorio.
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Dominio.Repositories.ISqlQuery">
+            <summary>
+            Define el contrato para métodos principales para ejecución de consultas SQL.
+            </summary>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Repositories.ISqlQuery.ExecuteQuery``1(System.String,System.Object[])">
+            <summary>
+            Ejecuta una consulta en el repositorio de datos.
+            </summary>
+            <typeparam name="TEntity">Entidad de dominio</typeparam>
+            <param name="sqlQuery">Consulta SQL a ejecutarse en la BD.</param>
+            <param name="parameters">Parametros de la consulta SQL</param>
+            <returns>Una lista de entidades del repositorio de datos.</returns>
+        </member>
+        <member name="T:UIBASOFT.Base.Dominio.Uow.IUnitOfWork">
+            <summary>
+            Contrato que define métodos para la implementación del patrón Unit of Work.
+            </summary>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Uow.IUnitOfWork.SyncObjectState(System.Object)">
+            <summary>
+            Sincroniza el estado de los objetos de dominio registrado en la Unit Of Work.
+            </summary>
+            <param name="entity">Representa una Entidad de dominio.</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Uow.IUnitOfWork.SaveChanges">
+            <summary>
+            Confirma las operaciones a realizar en el repositorio de datos (Commit)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Uow.IUnitOfWork.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Confirma las operaciones a realizar en el repositorio de datos (Commit) de manera Asincrona.
+            </summary>
+            <param name="cancellationToken">Determina a CancellationToken</param>
+            <returns>Tarea resultado de la operacion de persistir los cambios de manera asincrona</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Uow.IUnitOfWork.SaveChangesAsync">
+            <summary>
+            Confirma las operaciones a realizar en el repositorio de datos (Commit) de manera Asincrona.
+            </summary>
+            <returns>Tarea resultado de la operacion de persistir los cambios de manera asincrona</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Dominio.Uow.IUnitOfWork.RollbackChanges">
+            <summary>
+            Deshace los cambios de las entidades de dominios registrados en el UnitOfWork que no han sido persistidos en 
+            el repositorio de datos.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Dominio.Uow.IUnitOfWork.InstanceId">
+            <summary>
+            Identificador de la instancia de Unit Of Work.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TuMascota.AccesoDatos.DataModels;
-using UIBASOFT.Base.Comunes.ResultOperation;
 
 namespace TuMascota.AccesoDatos.Modulos.Core.Usuarios
 {

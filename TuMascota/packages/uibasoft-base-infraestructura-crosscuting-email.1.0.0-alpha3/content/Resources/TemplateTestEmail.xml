@@ -1,0 +1,46 @@
+﻿<p>
+  <div>
+    <h3 align="left"> EMAIL TESTING </h3>
+  </div> 
+<p>
+  <b> <span style="text-decoration:underline;">Aviso Importante</span></b>
+</p>
+
+<p>
+  Este correo fue enviado porque se ha especificado el atributo <b>pathTest</b> de la seccion de configuracion: <b>&lt;email&gt;</b>.
+</p>
+
+<p>
+  Las direcciones que se listan a continuación son las destinatarias originales del procedimiento de envío de correos que se ejecutaría regularmente.  
+</p>
+
+<p>
+  En el Grupo <b>To:</b>
+  <ul>
+    {#DIRECCIONES_EMAIL_TO#}
+  </ul>
+</p>
+  
+<p>
+  En el Grupo <b>Cc:</b>
+  <ul>
+    {#DIRECCIONES_EMAIL_CC#}
+  </ul>
+</p>
+  
+<p>
+  En el Grupo <b>Bcc:</b>
+  <ul>
+    {#DIRECCIONES_EMAIL_BCC#}
+  </ul>
+</p>
+
+<p>A continuación, una muestra el contenido original del mensaje de correo.</p>
+  
+<hr/>
+  
+<p>
+  {#CONTENIDO_MENSAJE#}
+</p>
+
+</p>

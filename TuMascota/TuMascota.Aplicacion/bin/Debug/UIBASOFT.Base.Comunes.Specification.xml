@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UIBASOFT.Base.Comunes.Specification</name>
+    </assembly>
+    <members>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.AndSpecification`1">
+            <summary>
+            A logic AND Specification
+            </summary>
+            <typeparam name="T">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.CompositeSpecification`1">
+            <summary>
+            Base class for composite specifications
+            </summary>
+            <typeparam name="TEntity">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.Specification`1">
+            <summary>
+            Represent a Expression Specification
+            <remarks>
+            Specification overload operators for create AND,OR or NOT specifications.
+            Additionally overload AND and OR operators with the same sense of ( binary And and binary Or ).
+            C# couldn’t overload the AND and OR operators directly since the framework doesn’t allow such craziness. But
+            with overloading false and true operators this is posible. For explain this behavior please read
+            http://msdn.microsoft.com/en-us/library/aa691312(VS.71).aspx
+            </remarks>
+            </summary>
+            <typeparam name="TValueObject">Type of item in the criteria</typeparam>
+        </member>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.ISpecification`1">
+            <summary>
+            Base contract for Specification pattern, for more information
+            about this pattern see http://martinfowler.com/apsupp/spec.pdf
+            or http://en.wikipedia.org/wiki/Specification_pattern.
+            This is really a variant implementation where we have added Linq and
+            lambda expression into this pattern.
+            </summary>
+            <typeparam name="TEntity">Type of entity</typeparam>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.ISpecification`1.SatisfiedBy">
+            <summary>
+            Check if this specification is satisfied by a 
+            specific expression lambda
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.Specification`1.SatisfiedBy">
+            <summary>
+            IsSatisFied Specification pattern method,
+            </summary>
+            <returns>Expression that satisfy this specification</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.Specification`1.op_BitwiseAnd(UIBASOFT.Base.Comunes.Specification.Specification{`0},UIBASOFT.Base.Comunes.Specification.Specification{`0})">
+            <summary>
+             And operator
+            </summary>
+            <param name="leftSideSpecification">left operand in this AND operation</param>
+            <param name="rightSideSpecification">right operand in this AND operation</param>
+            <returns>New specification</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.Specification`1.op_BitwiseOr(UIBASOFT.Base.Comunes.Specification.Specification{`0},UIBASOFT.Base.Comunes.Specification.Specification{`0})">
+            <summary>
+            Or operator
+            </summary>
+            <param name="leftSideSpecification">left operand in this OR operation</param>
+            <param name="rightSideSpecification">left operand in this OR operation</param>
+            <returns>New specification </returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.Specification`1.op_LogicalNot(UIBASOFT.Base.Comunes.Specification.Specification{`0})">
+            <summary>
+            Not specification
+            </summary>
+            <param name="specification">Specification to negate</param>
+            <returns>New specification</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.Specification`1.op_False(UIBASOFT.Base.Comunes.Specification.Specification{`0})">
+            <summary>
+            Override operator false, only for support AND OR operators
+            </summary>
+            <param name="specification">Specification instance</param>
+            <returns>See False operator in C#</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.Specification`1.op_True(UIBASOFT.Base.Comunes.Specification.Specification{`0})">
+            <summary>
+            Override operator True, only for support AND OR operators
+            </summary>
+            <param name="specification">Specification instance</param>
+            <returns>See True operator in C#</returns>
+        </member>
+        <member name="P:UIBASOFT.Base.Comunes.Specification.CompositeSpecification`1.LeftSideSpecification">
+            <summary>
+            Left side specification for this composite element
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Comunes.Specification.CompositeSpecification`1.RightSideSpecification">
+            <summary>
+            Right side specification for this composite element
+            </summary>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.AndSpecification`1.#ctor(UIBASOFT.Base.Comunes.Specification.ISpecification{`0},UIBASOFT.Base.Comunes.Specification.ISpecification{`0})">
+            <summary>
+            Default constructor for AndSpecification
+            </summary>
+            <param name="leftSide">Left side specification</param>
+            <param name="rightSide">Right side specification</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.AndSpecification`1.SatisfiedBy">
+            <summary>
+            <see cref="T:UIBASOFT.Base.Comunes.Specification.ISpecification`1"/>
+            </summary>
+            <returns><see cref="T:UIBASOFT.Base.Comunes.Specification.ISpecification`1"/></returns>
+        </member>
+        <member name="P:UIBASOFT.Base.Comunes.Specification.AndSpecification`1.LeftSideSpecification">
+            <summary>
+            Left side specification
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Comunes.Specification.AndSpecification`1.RightSideSpecification">
+            <summary>
+            Right side specification
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.DirectSpecification`1">
+            <summary>
+            A Direct Specification is a simple implementation
+            of specification that acquire this from a lambda expression
+            in  constructor
+            </summary>
+            <typeparam name="TEntity">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.DirectSpecification`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Default constructor for Direct Specification
+            </summary>
+            <param name="matchingCriteria">A Matching Criteria</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.DirectSpecification`1.SatisfiedBy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.ExpressionBuilder">
+            <summary>
+            Extension methods for adding AND and OR with parameters rebinder
+            </summary>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.ExpressionBuilder.Compose``1(System.Linq.Expressions.Expression{``0},System.Linq.Expressions.Expression{``0},System.Func{System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression})">
+            <summary>
+            Compose two expressions and merge all in a new expression
+            </summary>
+            <typeparam name="T">Type of params in expression</typeparam>
+            <param name="first">Expression instance</param>
+            <param name="second">Expression to merge</param>
+            <param name="merge">Function to merge</param>
+            <returns>New merged expression</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.ExpressionBuilder.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            And operator
+            </summary>
+            <typeparam name="T">Type of params in expression</typeparam>
+            <param name="first">Right Expression in AND operation</param>
+            <param name="second">Left Expression in And operation</param>
+            <returns>New AND expression</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.ExpressionBuilder.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Or operator
+            </summary>
+            <typeparam name="T">Type of param in expression</typeparam>
+            <param name="first">Right expression in OR operation</param>
+            <param name="second">Left expression in OR operation</param>
+            <returns>New Or expressions</returns>
+        </member>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.NotSpecification`1">
+            <summary>
+            NotEspecification convert a original
+            specification with NOT logic operator
+            </summary>
+            <typeparam name="TEntity">Type of element for this specificaiton</typeparam>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.NotSpecification`1.#ctor(UIBASOFT.Base.Comunes.Specification.ISpecification{`0})">
+            <summary>
+            Constructor for NotSpecificaiton
+            </summary>
+            <param name="originalSpecification">Original specification</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.NotSpecification`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constructor for NotSpecification
+            </summary>
+            <param name="originalSpecification">Original specificaiton</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.NotSpecification`1.SatisfiedBy">
+            <summary>
+            <see cref="T:UIBASOFT.Base.Comunes.Specification.ISpecification`1"/>
+            </summary>
+            <returns><see cref="T:UIBASOFT.Base.Comunes.Specification.ISpecification`1"/></returns>
+        </member>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.OrSpecification`1">
+            <summary>
+            A Logic OR Specification
+            </summary>
+            <typeparam name="T">Type of entity that check this specification</typeparam>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.OrSpecification`1.#ctor(UIBASOFT.Base.Comunes.Specification.ISpecification{`0},UIBASOFT.Base.Comunes.Specification.ISpecification{`0})">
+            <summary>
+            Default constructor for AndSpecification
+            </summary>
+            <param name="leftSide">Left side specification</param>
+            <param name="rightSide">Right side specification</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.OrSpecification`1.SatisfiedBy">
+            <summary>
+            <see cref="T:UIBASOFT.Base.Comunes.Specification.ISpecification`1"/>
+            </summary>
+            <returns><see cref="T:UIBASOFT.Base.Comunes.Specification.ISpecification`1"/></returns>
+        </member>
+        <member name="P:UIBASOFT.Base.Comunes.Specification.OrSpecification`1.LeftSideSpecification">
+            <summary>
+            Left side specification
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Comunes.Specification.OrSpecification`1.RightSideSpecification">
+            <summary>
+            Righ side specification
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.ParameterRebinder">
+            <summary>
+            Helper for rebinder parameters without use Invoke method in expressions 
+            ( this methods is not supported in all linq query providers, 
+            for example in Linq2Entities is not supported)
+            </summary>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.ParameterRebinder.#ctor(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression})">
+            <summary>
+            Default construcotr
+            </summary>
+            <param name="map">Map specification</param>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.ParameterRebinder.ReplaceParameters(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.Expression)">
+            <summary>
+            Replate parameters in expression with a Map information
+            </summary>
+            <param name="map">Map information</param>
+            <param name="exp">Expression to replace parameters</param>
+            <returns>Expression with parameters replaced</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.ParameterRebinder.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Visit pattern method
+            </summary>
+            <param name="p">A Parameter expression</param>
+            <returns>New visited expression</returns>
+        </member>
+        <member name="T:UIBASOFT.Base.Comunes.Specification.TrueSpecification`1">
+            <summary>
+            True specification
+            </summary>
+            <typeparam name="TEntity">Type of entity in this specification</typeparam>
+        </member>
+        <member name="M:UIBASOFT.Base.Comunes.Specification.TrueSpecification`1.SatisfiedBy">
+            <summary>
+            <see cref="T:UIBASOFT.Base.Comunes.Specification.Specification`1"/>
+            </summary>
+            <returns><see cref="T:UIBASOFT.Base.Comunes.Specification.Specification`1"/></returns>
+        </member>
+    </members>
+</doc>

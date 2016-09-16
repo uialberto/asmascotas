@@ -1,0 +1,6 @@
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\bin\Debug\TuMascota.AccesoDatos.Test.dll
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\bin\Debug\TuMascota.AccesoDatos.Test.pdb
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\obj\Debug\TuMascota.AccesoDatos.Test.dll
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos.Test\obj\Debug\TuMascota.AccesoDatos.Test.pdb
