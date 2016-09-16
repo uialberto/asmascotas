@@ -1,0 +1,6 @@
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion.Test\bin\Debug\TuMascota.Aplicacion.Test.dll
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion.Test\bin\Debug\TuMascota.Aplicacion.Test.pdb
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion.Test\obj\Debug\TuMascota.Aplicacion.Test.dll
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion.Test\obj\Debug\TuMascota.Aplicacion.Test.pdb

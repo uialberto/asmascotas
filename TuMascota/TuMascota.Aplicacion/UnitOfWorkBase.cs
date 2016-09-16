@@ -12,7 +12,7 @@ namespace TuMascota.Aplicacion
 {
     public class UnitOfWorkBase : MascotaModelContainer, IUnitOfWork
     {
-        private UnitOfWorkBase(string dbContext) : base(dbContext)
+        public UnitOfWorkBase(string dbContext) : base(dbContext)
         {
 
         }

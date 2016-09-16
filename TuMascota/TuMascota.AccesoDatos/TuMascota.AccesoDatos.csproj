@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModels\Entities\Mascota.cs" />
     <Compile Include="DataModels\Mascota.cs">
       <DependentUpon>MascotaModel.tt</DependentUpon>
     </Compile>
@@ -77,6 +78,7 @@
       <DependentUpon>MascotaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Modulos\Core\Mascotas\IRepoMascotas.cs" />
     <Compile Include="Modulos\Core\Usuarios\IRepoUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
