@@ -61,6 +61,5 @@ D:\Alberto\apps\mimascota\tuMascota\TuMascota\WebTuMascota\bin\System.Web.Webpag
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\WebTuMascota\bin\System.Web.Webpages.Razor.xml
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\WebTuMascota\bin\System.Web.Helpers.xml
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\WebTuMascota\bin\System.Web.Mvc.xml
-D:\Alberto\apps\mimascota\tuMascota\TuMascota\WebTuMascota\obj\Debug\WebTuMascota.csprojResolveAssemblyReference.cache
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\WebTuMascota\obj\Debug\WebTuMascota.dll
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\WebTuMascota\obj\Debug\WebTuMascota.pdb

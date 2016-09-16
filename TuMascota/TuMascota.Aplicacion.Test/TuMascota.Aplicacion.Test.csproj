@@ -52,6 +52,20 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TuMascota.AccesoDatos.Test\TuMascota.AccesoDatos.Test.csproj">
+      <Project>{2d26ecc6-7c94-4c8d-8fb3-4ebc48eeb224}</Project>
+      <Name>TuMascota.AccesoDatos.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TuMascota.AccesoDatos\TuMascota.AccesoDatos.csproj">
+      <Project>{cabe8849-c1e1-4265-8d18-1264fef512b6}</Project>
+      <Name>TuMascota.AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TuMascota.Aplicacion\TuMascota.Aplicacion.csproj">
+      <Project>{7ab07f1b-9fd5-4c8a-823a-f9671b03b63f}</Project>
+      <Name>TuMascota.Aplicacion</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
