@@ -40,7 +40,7 @@ namespace TuMascota.Aplicacion.Test.Test.Core
                 Nombres = UtilitariosBase.NewGuid().Substring(1, 10),
                 Apellidos = UtilitariosBase.NewGuid().Substring(1, 10),
                 Username = UtilitariosBase.NewGuid().Substring(1, 10),
-                Password = UtilitariosBase.NewGuid().Substring(1, 8),
+                Password = "uialberto",
                 Email = UtilitariosBase.NewGuid().Substring(1, 10),
 
             };
@@ -57,6 +57,39 @@ namespace TuMascota.Aplicacion.Test.Test.Core
             #region Assert
 
             Assert.IsTrue(!res.HasErrors);
+
+            #endregion
+
+
+        }
+        [TestMethod]
+        public async Task ValidarLoginTest()
+        {
+            #region Arrange
+
+            var user = new UsuarioDto()
+            {
+                Nombres = UtilitariosBase.NewGuid().Substring(1, 10),
+                Apellidos = UtilitariosBase.NewGuid().Substring(1, 10),
+                Username = UtilitariosBase.NewGuid().Substring(1, 10),
+                Password = "uialberto",
+                Email = UtilitariosBase.NewGuid().Substring(1, 10),
+
+            };
+
+            #endregion
+
+            #region Act
+
+            var target = CreateUsuariosServicesApp();
+            var res = await target.Registrar(user);
+            var result = target.ValidarLogin(user.Email, "uialberto");
+
+            #endregion
+
+            #region Assert
+
+            Assert.IsTrue(!result.HasErrors);
 
             #endregion
 
