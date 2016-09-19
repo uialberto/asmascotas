@@ -40,7 +40,8 @@ namespace TuMascota.Aplicacion
             if (iocUnityManager != null)
             {
                 var rootUnityContainer = iocUnityManager.RootContainer;
-                rootUnityContainer.RegisterType<IUnitOfWork, UnitOfWorkBase>(new TransientLifetimeManager(), new InjectionConstructor(connectionString.ConnectionString));
+                rootUnityContainer.RegisterType<IUnitOfWork, UnitOfWorkBase>(new TransientLifetimeManager(), 
+                    new InjectionConstructor(connectionString.ConnectionString));
             }
 
 

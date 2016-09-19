@@ -7,5 +7,6 @@ D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos\bin\Debug\UI
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos\bin\Debug\EntityFramework.xml
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos\bin\Debug\EntityFramework.SqlServer.xml
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos\bin\Debug\UIBASOFT.Base.Comunes.xml
+D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos\obj\Debug\TuMascota.AccesoDatos.csprojResolveAssemblyReference.cache
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos\obj\Debug\TuMascota.AccesoDatos.dll
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.AccesoDatos\obj\Debug\TuMascota.AccesoDatos.pdb
