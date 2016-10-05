@@ -93,13 +93,13 @@ namespace TuMascota.Aplicacion.Modulos.Core.Usuarios.Impl
                     throw new Exception(nameof(cipher));
 
 
-                var encryptPass = cipher.Encrypt(dto.Password);
+                var encryptPassword = cipher.Encrypt(dto.Password);
                 var usuario = new Usuario
                 {
                     Nombres = dto.Nombres,
                     Apellidos = dto.Apellidos,
                     Email = dto.Email,
-                    Password = encryptPass,
+                    Password = encryptPassword,
                     Username = dto.Username
                 };
                 result.Valor = await ReposUsuarios.Crear(usuario);
