@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UIBASOFT.Base.Infraestructura.Crosscuting.Email</name>
+    </assembly>
+    <members>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.ResourceEmailMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.ResourceEmailMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.ResourceEmailMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.ResourceEmailMessages.ErrorNoConfiguradoDestinatarios">
+            <summary>
+              Looks up a localized string similar to No se ha establecido direcciones de correos para los destinatarios..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.ResourceEmailMessages.ErrorNoConfiguradoEmailOrigen">
+            <summary>
+              Looks up a localized string similar to No se ha establecido la direccion de origen en el mensaje..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.ResourceEmailMessages.ErrorNoEstablecidaPlantillaCorreo">
+            <summary>
+              Looks up a localized string similar to No se ha establecido una plantilla para el envio del mensaje..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.ResourceEmailMessages.ErrorNoExisteFichero">
+            <summary>
+              Looks up a localized string similar to La ruta del fichero no corresponde a una ruta valida o no existe el fichero. .
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.ResourceEmailMessages.ErrorSaveEmailMessajeTest">
+            <summary>
+              Looks up a localized string similar to Se ha producido un error al guardar el mensaje de correo en el directorio especificado. Mensaje: {0}.
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.TemplateEmailTest">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.TemplateEmailTest.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.TemplateEmailTest.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.TemplateEmailTest.KeyHtmlDireccionesCorreosBcc">
+            <summary>
+              Looks up a localized string similar to {#DIRECCIONES_EMAIL_BCC#}.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.TemplateEmailTest.KeyHtmlDireccionesCorreosCc">
+            <summary>
+              Looks up a localized string similar to {#DIRECCIONES_EMAIL_CC#}.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.TemplateEmailTest.KeyHtmlDireccionesCorreosTo">
+            <summary>
+              Looks up a localized string similar to {#DIRECCIONES_EMAIL_TO#}.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.TemplateEmailTest.TemplateHtmlContenidoMensaje">
+            <summary>
+              Looks up a localized string similar to {#CONTENIDO_MENSAJE#}.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.TemplateEmailTest.TemplateHtmlElementoLista">
+            <summary>
+              Looks up a localized string similar to &lt;li&gt;{0}&lt;/li&gt;.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.Email.Resources.TemplateEmailTest.TemplateTestEmail">
+             <summary>
+               Looks up a localized string similar to 
+            &lt;p&gt;
+              &lt;b&gt; &lt;span style=&quot;text-decoration:underline;&quot;&gt;Aviso Importante&lt;/span&gt;&lt;/b&gt;
+            &lt;/p&gt;
+            
+            &lt;p&gt;
+              Este correo fue enviado porque se ha especificado el atributo &lt;b&gt;testEMailAddress&lt;/b&gt; de la sección de configuración: &lt;b&gt;&amp;lt;application&amp;gt;&lt;/b&gt;.
+            &lt;/p&gt;
+            
+            &lt;p&gt;
+              Las direcciones que se listan a continuación son las destinatarias originales del procedimiento de envío de correos que se ejecutaría regularmente.  
+            &lt;/p&gt;
+            
+            &lt;p&gt;
+              En el Grupo &lt;b&gt;To:&lt;/b&gt;
+              &lt;ul&gt;
+                {#DIRECCIONES_EMAIL_TO#}
+              &lt;/ul&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+              En [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+    </members>
+</doc>

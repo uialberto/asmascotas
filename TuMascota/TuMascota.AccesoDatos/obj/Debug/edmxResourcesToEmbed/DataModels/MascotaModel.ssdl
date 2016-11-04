@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MascotaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MascotaModelStoreContainer">
+    <EntitySet Name="Usuarios" EntityType="MascotaModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Mascotas" EntityType="MascotaModel.Store.Mascotas" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UsuarioMascota" Association="MascotaModel.Store.UsuarioMascota">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Mascota" EntitySet="Mascotas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Nombres" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Apellidos" Type="nvarchar" Nullable="true" MaxLength="300" />
+    <Property Name="Celular" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Telefono" Type="nvarchar" Nullable="true" MaxLength="120" />
+    <Property Name="Direccion" Type="nvarchar" Nullable="true" MaxLength="800" />
+    <Property Name="Facebook" Type="nvarchar" Nullable="true" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Mascotas">
+    <Key>
+      <PropertyRef Name="IdMascota" />
+    </Key>
+    <Property Name="IdMascota" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Nacimiento" Type="datetime" Nullable="true" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Raza" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="Imagen" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="Estado" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="true" MaxLength="800" />
+    <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+    <Property Name="Latitud" Type="bigint" Nullable="true" />
+    <Property Name="Longitud" Type="bigint" Nullable="true" />
+    <Property Name="TipoAnimal" Type="nvarchar" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <Association Name="UsuarioMascota">
+    <End Role="Usuario" Type="MascotaModel.Store.Usuarios" Multiplicity="1" />
+    <End Role="Mascota" Type="MascotaModel.Store.Mascotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Mascota">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
