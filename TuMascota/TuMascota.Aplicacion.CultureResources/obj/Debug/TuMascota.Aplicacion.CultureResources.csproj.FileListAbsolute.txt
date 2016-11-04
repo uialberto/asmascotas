@@ -8,7 +8,6 @@ D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion.CultureResour
 D:\Alberto\apps\mimascota\tuMascota\TuMascota\TuMascota.Aplicacion.CultureResources\obj\Debug\TuMascota.Aplicacion.CultureResources.pdb
 D:\Alberto\apps\asmascota\asm\TuMascota\TuMascota.Aplicacion.CultureResources\bin\Debug\TuMascota.Aplicacion.CultureResources.dll
 D:\Alberto\apps\asmascota\asm\TuMascota\TuMascota.Aplicacion.CultureResources\bin\Debug\TuMascota.Aplicacion.CultureResources.pdb
-D:\Alberto\apps\asmascota\asm\TuMascota\TuMascota.Aplicacion.CultureResources\obj\Debug\TuMascota.Aplicacion.CultureResources.csprojResolveAssemblyReference.cache
 D:\Alberto\apps\asmascota\asm\TuMascota\TuMascota.Aplicacion.CultureResources\obj\Debug\TuMascota.Aplicacion.CultureResources.ServicesMascotasResources.resources
 D:\Alberto\apps\asmascota\asm\TuMascota\TuMascota.Aplicacion.CultureResources\obj\Debug\TuMascota.Aplicacion.CultureResources.ServicesUsuariosResources.resources
 D:\Alberto\apps\asmascota\asm\TuMascota\TuMascota.Aplicacion.CultureResources\obj\Debug\TuMascota.Aplicacion.CultureResources.csproj.GenerateResource.Cache
