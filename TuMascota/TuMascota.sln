@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTuMascota", "WebTuMascot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTuMascota.Tests", "WebTuMascota.Tests\WebTuMascota.Tests.csproj", "{218718AC-3920-4C2E-85E6-19CD7512C7AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuMascota.Aplicacion.CultureResources", "TuMascota.Aplicacion.CultureResources\TuMascota.Aplicacion.CultureResources.csproj", "{268E4B2C-C392-40B1-9536-2E9EC5C4897B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{218718AC-3920-4C2E-85E6-19CD7512C7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{218718AC-3920-4C2E-85E6-19CD7512C7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{218718AC-3920-4C2E-85E6-19CD7512C7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{268E4B2C-C392-40B1-9536-2E9EC5C4897B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{268E4B2C-C392-40B1-9536-2E9EC5C4897B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{268E4B2C-C392-40B1-9536-2E9EC5C4897B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{268E4B2C-C392-40B1-9536-2E9EC5C4897B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +68,6 @@ Global
 		{07BC7149-05D3-43E2-8B5A-CDF58628AAF7} = {611331C2-3439-423E-8AE1-0AE5FC667837}
 		{5BA3EDF2-1649-422A-8E15-B0BE13348A86} = {1342D47B-6BE4-4BFC-BB27-9F4CDE85297F}
 		{218718AC-3920-4C2E-85E6-19CD7512C7AA} = {1342D47B-6BE4-4BFC-BB27-9F4CDE85297F}
+		{268E4B2C-C392-40B1-9536-2E9EC5C4897B} = {611331C2-3439-423E-8AE1-0AE5FC667837}
 	EndGlobalSection
 EndGlobal

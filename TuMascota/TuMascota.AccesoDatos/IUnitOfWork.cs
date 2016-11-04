@@ -8,6 +8,5 @@ namespace TuMascota.AccesoDatos
 {
     public interface IUnitOfWork
     {
-
     }
 }
