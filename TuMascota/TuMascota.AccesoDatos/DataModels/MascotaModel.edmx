@@ -4,11 +4,61 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="MascotaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="MascotaModelTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="MascotaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MascotaModelStoreContainer">
+    <EntitySet Name="Usuarios" EntityType="MascotaModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Mascotas" EntityType="MascotaModel.Store.Mascotas" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UsuarioMascota" Association="MascotaModel.Store.UsuarioMascota">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Mascota" EntitySet="Mascotas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Nombres" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Apellidos" Type="nvarchar" Nullable="true" MaxLength="300" />
+    <Property Name="Celular" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Telefono" Type="nvarchar" Nullable="true" MaxLength="120" />
+    <Property Name="Direccion" Type="nvarchar" Nullable="true" MaxLength="800" />
+    <Property Name="Facebook" Type="nvarchar" Nullable="true" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Mascotas">
+    <Key>
+      <PropertyRef Name="IdMascota" />
+    </Key>
+    <Property Name="IdMascota" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Nacimiento" Type="datetime" Nullable="true" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Raza" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="Imagen" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="Estado" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="true" MaxLength="800" />
+    <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+    <Property Name="Latitud" Type="bigint" Nullable="true" />
+    <Property Name="Longitud" Type="bigint" Nullable="true" />
+    <Property Name="TipoAnimal" Type="nvarchar" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <Association Name="UsuarioMascota">
+    <End Role="Usuario" Type="MascotaModel.Store.Usuarios" Multiplicity="1" />
+    <End Role="Mascota" Type="MascotaModel.Store.Mascotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Mascota">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MascotaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
@@ -71,13 +121,45 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="MascotaModel" />
-        <Alias Key="Target" Value="MascotaModel.Store" />
-        <EntityContainerMapping CdmEntityContainer="MascotaModelContainer" StorageEntityContainer="MascotaModelTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MascotaModelStoreContainer" CdmEntityContainer="MascotaModelContainer">
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(MascotaModel.Usuario)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mascotas">
+      <EntityTypeMapping TypeName="IsTypeOf(MascotaModel.Mascota)">
+        <MappingFragment StoreEntitySet="Mascotas">
+          <ScalarProperty Name="IdMascota" ColumnName="IdMascota" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Nacimiento" ColumnName="Nacimiento" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Raza" ColumnName="Raza" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+          <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+          <ScalarProperty Name="TipoAnimal" ColumnName="TipoAnimal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -91,6 +173,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

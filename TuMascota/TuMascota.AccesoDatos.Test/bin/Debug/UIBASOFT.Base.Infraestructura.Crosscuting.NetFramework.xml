@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework</name>
+    </assembly>
+    <members>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Operations.Logging.XxxLogger">
+            <summary>
+            Clase de ejemplo de implementacion de XxxLogger
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Operations.Logging.XxxLoggerFactory">
+            <summary>
+            Clase de ejemplo de XxxLoggerFactory
+            </summary>
+        </member>
+        <member name="M:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Operations.Logging.XxxLoggerFactory.Create(System.Object)">
+            <summary>
+            Create the XxxLogger
+            </summary>
+            <returns>New ILog based on XxxLogger(other sample Trace Source)</returns>
+        </member>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Operations.Password.Pbkdf2PasswordCipher">
+            <summary>
+            Cifrador de contraseñas usando la definición: http://en.wikipedia.org/wiki/PBKDF2
+            </summary>
+        </member>
+        <member name="M:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Operations.Password.Pbkdf2PasswordCipher.Encrypt(System.String)">
+            <summary>
+            Creates a salted PBKDF2 hash of the password.
+            </summary>
+            <param name="password">Contraseña para aplicar el cifrado.</param>
+            <returns>Contraseña cifrada.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Operations.Password.Pbkdf2PasswordCipher.ValidatePassword(System.String,System.String)">
+            <summary>
+            Valida la contraseña a partir de la contraseña cifrada correctamente.
+            </summary>
+            <param name="password">Contraseña a verificar.</param>
+            <param name="passwordHash">Contraseña cifrada correctamente.</param>
+            <returns>Verdadero si la contraseña es la correcta, falso de lo contrario.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Operations.Password.Pbkdf2PasswordCipher.SlowEquals(System.Byte[],System.Byte[])">
+            <summary>
+            Compares two byte arrays in length-constant time. This comparison
+            method is used so that password hashes cannot be extracted from
+            on-line systems using a timing attack and then attacked off-line.
+            </summary>
+            <param name="a">The first byte array.</param>
+            <param name="b">The second byte array.</param>
+            <returns>True if both byte arrays are equal. False otherwise.</returns>
+        </member>
+        <member name="M:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Operations.Password.Pbkdf2PasswordCipher.PBKDF2(System.String,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Computes the PBKDF2-SHA1 hash of a password.
+            </summary>
+            <param name="password">The password to hash.</param>
+            <param name="salt">The salt.</param>
+            <param name="iterations">The PBKDF2 iteration count.</param>
+            <param name="outputBytes">The length of the hash to generate, in bytes.</param>
+            <returns>A hash of the password.</returns>
+        </member>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadAccountById">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/InfoAccountById.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadAccountByRoles">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/AccountByRoles.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadAddRolesAccount">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/AddRolesAccount.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadChangePasswordAccount">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/ChangePassword.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadChangePasswordFullAccount">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/ChangePasswordFull.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadCreateAccount">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/CreateAccount.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadCreateAccountEmail">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/CreateAccountEmail.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadCreatePrivilegio">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/CreatePrivilegioRol.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadCreateRol">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/CreateRol.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadHasPrivilegesAccount">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/HasPrivilegesAccount.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadInfoAccountByUsername">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/InfoAccountByUsername.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadListEntidades">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/ListEntidades.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadListOperacionEntidad">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/ListOperacionEntidad.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadListOperaciones">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/ListOperaciones.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadListPrivilegios">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/ListPrivilegios.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadLoginByUsername">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/LoginByUsername.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadModulosAppByUserId">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/ModulosAppByUserId.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadObjetosPermitidosByUserId">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/ObjetosPermitidosByUserId.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadPermisosEntidadByKeyCodeApp">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/PermisosEntidadByKeyCodeApp.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadRemoveAccount">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/RemoveAccount.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadRemoveRolesAccount">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/RemoveRolesAccount.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadRolesAnyPrivilegesByKeyCodeModule">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/RolesAnyPrivilegesByKeyCodeModule.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadRolesByUserId">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/RolesByUserId.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadRootAppModuleByKeyCode">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/RootAppModuleByKeyCode.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadRootsAppModulesByAccount">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/RootsAppModulesByAccount.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadRootsAppModulesByKeyCode">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/RootsAppModulesByKeyCode.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadSearchRoles">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/SearchRoles.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadSearchUsuarios">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/SearchUsuarios.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientController.IshtaranSeguridadValidateAccountById">
+            <summary>
+              Looks up a localized string similar to {0}/IshtaranSeguridad/ValidateAccountById.
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.ErrorNotAccount">
+            <summary>
+              Looks up a localized string similar to No se ha indentificado la cuenta especificada..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.ErrorNotLogin">
+            <summary>
+              Looks up a localized string similar to El proceso de inicio de ssion ha fallado..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.ErrorNotLogout">
+            <summary>
+              Looks up a localized string similar to El proceso de cierre de session ha fallado..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranApellidosRequerido">
+            <summary>
+              Looks up a localized string similar to Apellidos del propietario de la cuenta es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranCodigoRequerido">
+            <summary>
+              Looks up a localized string similar to Identificador del usuario es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranEmailRequerido">
+            <summary>
+              Looks up a localized string similar to Correo electrónico es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranErrorConexion">
+            <summary>
+              Looks up a localized string similar to Ha ocurrido un error inesperado al establecer la conexión con el servidor central de Ishtaran. Si esto continúa, comuníquese con el administrador..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranKeyCodeEntidad">
+            <summary>
+              Looks up a localized string similar to KeyCode entidad u objeto es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranKeyCodeModuloAppRequerido">
+            <summary>
+              Looks up a localized string similar to KeyCode de la aplicacion es un dato requerido.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranKeyCodeModuloRequerido">
+            <summary>
+              Looks up a localized string similar to KeyCode módulo es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranKeyCodeOperacionRequerido">
+            <summary>
+              Looks up a localized string similar to KeyCode operación es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranNewPasswordRequerido">
+            <summary>
+              Looks up a localized string similar to Contrasenia nueva es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranNombresRequerido">
+            <summary>
+              Looks up a localized string similar to Nombres del propietario de la cuenta es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranOldPasswordRequerido">
+            <summary>
+              Looks up a localized string similar to Contrasenia anterior es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranPasswordRequerido">
+            <summary>
+              Looks up a localized string similar to Contrasenia es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranRolesRequerido">
+            <summary>
+              Looks up a localized string similar to Roles es un dato requerido..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.IshtaranApiClientMessages.IshtaranUsernameRequerido">
+            <summary>
+              Looks up a localized string similar to Nombre de usuario es un dato requerido..
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages.ErrorConfiguracionSeccionFileManager">
+            <summary>
+              Looks up a localized string similar to No se ha encontrado la seccion de configuracion de FileManagement en el archivo de configuración..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages.ErrorHttpServerAuxiliarPaths">
+            <summary>
+              Looks up a localized string similar to No se ha configurado el listado de direcciones o rutas variables (extras) para HttpServer.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages.ErrorLocalFileSystemAuxiliarPaths">
+            <summary>
+              Looks up a localized string similar to No se ha configurado el listado de direcciones o rutas variables (extras) para LocalFileSystem.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages.ErrorLocalizacionArchivoConfiguracion">
+            <summary>
+              Looks up a localized string similar to No se ha especificado al menos una de las dos configuraciones de localización de archivos: localFileSystem o httpServer.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages.ErrorNotExisteAuxiliarKeyName">
+            <summary>
+              Looks up a localized string similar to No se ha podido encontrar la ruta auxiliar con el nombre: {0}.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages.ErrorWriteFileAnonymus">
+            <summary>
+              Looks up a localized string similar to Se ha producido un error al escribir en el archivo especificado. Error: {0}.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceFileManagerMessages.WarningLocalFileSystemHttpServer">
+            <summary>
+              Looks up a localized string similar to Solo se puede configurar el acceso a archivos por uno de los medios: &apos;httpServer&apos; o &apos;localFileSystem&apos;.
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceNotSecurityImplementationMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceNotSecurityImplementationMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceNotSecurityImplementationMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.ResourceNotSecurityImplementationMessages.NoExisteCuentaEspecificada">
+            <summary>
+              Looks up a localized string similar to No existe informacion de la cuenta especificada: {0}.
+            </summary>
+        </member>
+        <member name="T:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.WsBasicSecurityServiceMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.WsBasicSecurityServiceMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.WsBasicSecurityServiceMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.WsBasicSecurityServiceMessages.ErrorNotAccount">
+            <summary>
+              Looks up a localized string similar to No se ha indentificado la cuenta especificada..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.WsBasicSecurityServiceMessages.ErrorNotLogin">
+            <summary>
+              Looks up a localized string similar to El proceso de inicio de ssion ha fallado..
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Resources.Messages.WsBasicSecurityServiceMessages.ErrorNotLogout">
+            <summary>
+              Looks up a localized string similar to El proceso de cierre de session ha fallado..
+            </summary>
+        </member>
+        <member name="M:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Security.SessionServices.InfoSessionIdentityCookie.Clear">
+            <summary>
+            Reinicia la informacion de la Sesión en Curso!
+            </summary>
+        </member>
+        <member name="P:UIBASOFT.Base.Infraestructura.Crosscuting.NetFramework.Security.SessionServices.InfoSessionIdentityCookie.AutorizationKeyId">
+            <summary>
+            Obtiene la Llave de Autorización para el Usuario de la Sesión.
+            </summary>
+        </member>
+    </members>
+</doc>
